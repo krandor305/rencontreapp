@@ -1,7 +1,6 @@
 {%extends "base.html"%}
 {%block content%}
 <div class="media">
-  <img src="{{product.Image.url}}" class="align-self-start mr-3">
   <div class="media-body">
     <h5 class="mt-0">{{product.nom}}</h5>
     <p>{{product.Description}}</p>
@@ -9,6 +8,10 @@
 </div>
 <hr>
 <h3>entrez votre commentaire</h3>
+<form method='post'>
+    {%csrf_token%}
+    {{form2.as_p}}
+    <input type="submit">
 {%for message in messages%}
 <p>{{message.innovateur}}:{{message.nom}}</p>
 {%endfor%}
