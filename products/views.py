@@ -72,7 +72,7 @@ def detail(request,slug):
                     form.save()
                     return HttpResponseRedirect('/products/mycreations')
             return render(request,'products/form.html',{"form":form,"form2":form2,"messages":messages})
-        return render(request,'products/detail.html',{"form":form2,"product":product})
+        return render(request,'products/detail.html',{"form2":form2,"product":product})
     except Products.DoesNotExist:
         return HttpResponseNotFound("<h1>not found</h1>")
     
