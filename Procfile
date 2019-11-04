@@ -1,1 +1,1 @@
-web: gunicorn etaj.wsgi
+web: gunicorn meetquick.wsgi
