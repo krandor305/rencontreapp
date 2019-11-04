@@ -1,0 +1,2 @@
+Requirement already satisfied: django in c:\users\admina\desktop\django\myenv\lib\site-packages (1.11.24)
+Requirement already satisfied: pytz in c:\users\admina\desktop\django\myenv\lib\site-packages (from django) (2018.5)

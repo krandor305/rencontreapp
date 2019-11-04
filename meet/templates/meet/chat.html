@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{%load crispy_forms_tags%}
+
+{%block header%}
+{%endblock header%}
+{%block content%}
+<ul class="list-group">
+{%for elem in liste%}
+<li class="list-group-item">{{elem.utilfrom.username}}:{{elem.texte}}</li>
+{%endfor%}
+</ul>
+<br>
+<form method="post">
+{% csrf_token %}
+{%crispy form%}
+<input type="submit">
+</form>
+{%endblock content%}

@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block header%}
+{%endblock header%}
+{%block content%}
+<table class="table">
+<thead>
+<tr>
+<th scope="col">utilisateur</th>
+<th scope="col">options</th>
+</tr>
+</thead>
+<tbody>
+{%for elem in liste%}
+<tr>
+<td><a href="/app/detail/{{elem.pk}}">{{elem.username}}</a></td>
+<td><a href="/app/chat/{{elem.pk}}" class="btn btn-primary">envoyer un message</a></td>
+</tr>
+{% endfor%}
+</tbody>
+</table>
+{%endblock content%}

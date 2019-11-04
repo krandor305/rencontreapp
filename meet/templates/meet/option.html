@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+{%load crispy_forms_tags%}
+
+{%block header%}
+{%endblock header%}
+{%block content%}
+<form method="post">
+{% csrf_token %}
+{%crispy form%}
+</form>
+
+<table class="table">
+<thead>
+<tr>
+<th scope="col">utilisateur</th>
+<th scope="col">description</th>
+<th scope="col">options</th>
+</tr>
+</thead>
+<tbody>
+{%for elem in liste%}
+<tr>
+<td scope="row">{{elem.username}}</td>
+<td>{{elem.description}}</td>
+<td><a href="/app/detail/{{elem.pk}}" class="btn btn-primary">détails</a></td>
+</tr>
+{% endfor%}
+</tbody>
+</table>
+{%endblock content%}

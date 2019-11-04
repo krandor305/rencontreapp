@@ -4,10 +4,11 @@
 
 {%block header%}
 {%endblock header%}
+
 {%block content%}
 <form method="post">
 {% csrf_token %}
 {% crispy form %}
-<input type="submit">
 </form>
+<a href="/inscription">inscrivez-vous</a>
 {%endblock content%}
